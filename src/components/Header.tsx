@@ -1,52 +1,52 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Tabs, Tab, Button } from '@mui/material'
 import styled from "styled-components";
-import { NavbarWrapper } from "../styles/Header.modules";
+import { NavbarWrapper } from "../styles/Styles.modules";
 
 
-const menuItems =[
-    
+const menuItems = [
 
-       {name:'HOME'},
 
-     {name:'NOW PLAYING'},
-     {name:'POPULAR'},
-     {name:'TV SHOWS'}
+    { name: 'HOME' },
 
-    
- 
+    { name: 'NOW PLAYING' },
+    { name: 'POPULAR' },
+    { name: 'TV SHOWS' }
+
+
+
 ]
 
 const Header = () => {
 
     return (
-        
-        
-         <NavbarWrapper>
-            <AppBar sx={{padding:"5px"}}>
+
+
+        <NavbarWrapper>
+            <AppBar sx={{ padding: "10px",backgroundColor:"#063970" }}>
 
                 <Toolbar>
-                    <Typography>
-                        Cinematica - 2
+                    <Typography className="logo">
+                       BITFLIX
                     </Typography>
-                    <div>
-{menuItems.map((nav,index)=>(<Tab label={nav.name} key={index}/>))}
+                    <div className="navLinks">
+                        {menuItems.map((nav, index) => (<Tab className="links" label={nav.name} key={index} />))}
 
                     </div>
-<Button variant="contained" color="info">Login</Button>
+                    <Button className="loginBtn" variant="contained" color="info">Login</Button>
                 </Toolbar>
             </AppBar>
         </NavbarWrapper>
 
-        
-        
-        
+
+
+
     )
-       
 
 
 
-    
+
+
 
 };
 
