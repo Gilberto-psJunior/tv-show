@@ -1,10 +1,16 @@
+import Header from "./components/Header"
+
 
 function App() {
   
 
   return (
     <>
-     <p>Olá</p>
+     
+    <h1>sdasddasasd</h1>
+    <header>sdds</header>
+    <Header/>
+     
     </>
   )
 }
